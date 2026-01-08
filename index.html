@@ -1,36 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>Amar Dinesh | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    <style>
+        :root {
+            --apple-bg: #ffffff;
+            --apple-secondary: #f5f5f7;
+            --apple-text: #1d1d1f;
+            --apple-blue: #0066cc;
+            --card-radius: 22px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-<style>
-body {
-  background-color:yellow;
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--apple-bg);
+            color: var(--apple-text);
+            -webkit-font-smoothing: antialiased;
+        }
 
-h1 {
-  color: green
-  ;
-  font-size:50px;
-  text-align: center;
-}
+        /* --- Apple Navigation Bar --- */
+        .navbar {
+            backdrop-filter: saturate(180%) blur(20px);
+            background-color: rgba(255, 255, 255, 0.8) !important;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 12px 0;
+        }
 
-p {
-  font-family: verdana;
-  font-size: 30px;
-}
-</style>
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* --- Minimalist Hero --- */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 10vw, 5.5rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 10px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.6rem;
+            color: #86868b;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        /* --- Bento Grid --- */
+        .bento-card {
+            background: var(--apple-secondary);
+            border-radius: var(--card-radius);
+            padding: 40px;
+            transition: var(--transition);
+            height: 100%;
+            border: none;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-5px);
+            background: #f0f0f2;
+        }
+
+        /* --- Apple Style Buttons --- */
+        .btn-apple-blue {
+            background: var(--apple-blue);
+            color: white;
+            border-radius: 980px;
+            padding: 10px 24px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn-apple-blue:hover {
+            background: #0077ed;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            border-radius: 980px;
+            padding: 10px 24px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn-instagram:hover {
+            transform: scale(1.05);
+            color: white;
+            box-shadow: 0 10px 20px rgba(220, 39, 67, 0.2);
+        }
+
+        footer {
+            padding: 80px 0 40px;
+            background: var(--apple-secondary);
+            margin-top: 100px;
+            font-size: 0.85rem;
+            color: #6e6e73;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>Hi i am amar </h1>
-<p>then this is my instagram id</p>
-<a href="https://www.instagram.com/prajith_kichuu/" target="_blank">
-  <i class="fa-brands fa-instagram"></i>
-</a>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-dark" href="#">Amar Dinesh</a>
+            <div class="ms-auto">
+                <a href="https://www.instagram.com/amar__dinesh/" target="_blank" class="btn-instagram">
+                    <i class="fab fa-instagram me-2"></i>Follow
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero container">
+        <h1>Amar Dinesh.</h1>
+        <p class="subtitle">BBA Logistics Student at Nehru College</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#about" class="btn-apple-blue">About Me</a>
+            <a href="https://www.instagram.com/amar__dinesh/" target="_blank" class="btn btn-outline-dark rounded-pill px-4">Contact</a>
+        </div>
+    </header>
+
+    <section id="about" class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="bento-card">
+                    <h2 class="fw-bold mb-4">Academic Focus.</h2>
+                    <p class="fs-5 text-muted">Currently in my <b>second year</b> of BBA Logistics, I am exploring the intricacies of global supply chains and transportation management at <b>Nehru College</b>.</p>
+                    <p class="text-muted">My goal is to integrate modern technology with traditional logistics to create more efficient, sustainable shipping solutions.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bento-card text-center d-flex flex-column justify-content-center">
+                    <i class="fab fa-instagram fa-3x mb-3" style="color: #bc1888;"></i>
+                    <h5 class="fw-bold">Stay Connected</h5>
+                    <p class="small text-muted mb-4">Follow my journey through college and logistics projects.</p>
+                    <a href="https://www.instagram.com/amar__dinesh/" target="_blank" class="btn-instagram">@amar__dinesh</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="bento-card">
+                    <h4 class="fw-bold"><i class="fas fa-truck-loading me-2 text-primary"></i> Logistics</h4>
+                    <p class="text-muted">Specializing in supply chain optimization and warehouse operations.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bento-card">
+                    <h4 class="fw-bold"><i class="fas fa-globe-americas me-2 text-success"></i> Trade</h4>
+                    <p class="text-muted">Focusing on international trade laws and global business strategies.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bento-card">
+                    <h4 class="fw-bold"><i class="fas fa-chart-line me-2 text-warning"></i> Analysis</h4>
+                    <p class="text-muted">Data-driven approach to solving logistical bottlenecks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2026 Amar Dinesh | Nehru College | BBA Logistics</p>
+            <div class="mt-3">
+                <a href="https://www.instagram.com/amar__dinesh/" class="text-dark mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
